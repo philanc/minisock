@@ -1,4 +1,4 @@
-# minisock
+# Minisock
 
 A **minimal** Lua socket library for unix / tcp / udp connections, written and tested on Linux.
 
@@ -19,7 +19,16 @@ Raw addresses can also be built in Lua by the application:
 Lua utility functions will be provided for building Unix, IPv4 and IPv6 addresses.
 
 
-### API
+### Build and test
+
+To build, adjust the LUADIR variable at the top of the makefile, then `make`.
+
+A very limited test is provided: run `lua echoclient.lua`, or `make test`.
+
+echoclient.lua tests in sequence a Unix, a TCP and a UDP socket connection (launch echoserver.lua, send a string to the server, get a reply from the server)
+
+
+### Minisock functions
 
 ```
 
@@ -136,7 +145,7 @@ msleep(n)
 
 ### License
 
-minisock is distributed under the terms of the MIT License.
+Minisock is distributed under the terms of the MIT License.
 
 Copyright (c) 2018 Phil Leblanc
 
