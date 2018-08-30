@@ -1,4 +1,5 @@
 # minisock
+
 A **minimal** Lua socket library for unix / tcp / udp connections, written and tested on Linux.
 
 The level of functionality is sufficient for some simple applications, but is definitely more primitive than, for example, socket.core in LuaSocket. The API is very close to the standard Unix system calls.
@@ -30,9 +31,9 @@ bind(addr)
 	return the server socket file descriptor (as an integer),  
 	or nil, error msg
 
-accept(servfd)
+accept(fd)
 	accept incoming connections on a server socket
-	servfd: the server socket file descriptor (as an integer)
+	fd: the server socket file descriptor (as an integer)
 	return the client socket file descriptor (as an integer) and
 	the raw client address as a string,  or nil, error msg
 	
@@ -79,7 +80,7 @@ udpsocket([addr])
 	is created and not bound. if addr is "\x0a", an AF_INET6 
 	socket is created and not bound. if addr length is > 1, 
 	the socket is created and bound.
-	return socket file descriptor as integer or nil, errmsg
+	return the socket file descriptor as integer or nil, errmsg
 
 sendto(fd, addr, msg)
 	send a message on a socket
@@ -131,8 +132,11 @@ msleep(n)
 	(it uses the linux nanosleep() function)
 	return value: true on success, or (nil, error msg)
 
-
-
-
-
 ```
+
+### License
+
+minisock is distributed under the terms of the MIT License.
+
+Copyright (c) 2018 Phil Leblanc
+
