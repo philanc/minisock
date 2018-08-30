@@ -1,9 +1,9 @@
 # minisock
-A ***minimal*** Lua socket library for unix / tcp / udp connections, written and tested on Linux.
+A **minimal** Lua socket library for unix / tcp / udp connections, written and tested on Linux.
 
-The level of functionality is sufficient for some simple applications, but is definitely more primitive than, for example, socket.core in LuaSocket.
+The level of functionality is sufficient for some simple applications, but is definitely more primitive than, for example, socket.core in LuaSocket. The API is very close to the standard Unix system calls.
 
-Addresses used as parameters in the API functions are **raw addresses** (`struct sockaddr`) stored in Lua as (binary) strings.
+Addresses used as parameters in the API functions are *raw addresses* (`struct sockaddr`) stored in Lua as (binary) strings.
 
 Raw addresses for a hostname/port pair can be obtained with function getaddrinfo().
 
