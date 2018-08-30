@@ -11,7 +11,7 @@ Raw addresses for a hostname/port pair can be obtained with function getaddrinfo
 Raw addresses can also be built in Lua by the application:
 
 * the IPv4 raw address for 1.2.3.4 port 80 is\
-`string.pack("<H>HBBB", 2, 80, 1, 2, 3, 4) .. "\0\0\0\0\0\0\0\0"`
+`string.pack("<H>HBBBB", 2, 80, 1, 2, 3, 4) .. "\0\0\0\0\0\0\0\0"`
 
 * the AF_UNIX socket raw address for /tmp/xyz.sock is\
 `"\1\0" .. "/tmp/xyz.sock"`
