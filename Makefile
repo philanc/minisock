@@ -26,7 +26,7 @@ minisock.so:  minisock.c
 	$(CC) -shared $(LDFLAGS) -o minisock.so minisock.o
 
 test:  minisock.so
-	$(LUA) echoclient.lua
+	$(LUA) echoclient.lua quiet
 	
 clean:
 	rm -f *.o *.a *.so
